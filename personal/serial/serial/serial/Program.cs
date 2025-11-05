@@ -7,6 +7,14 @@ Character character = new Character { FirstName="Mykola", LastName="Hohol", Desc
 string charachterSerialiezd = JsonSerializer.Serialize(character);
 File.WriteAllText("character.json", charachterSerialiezd);
 
+string charachterSerialiezd = JsonSerializer.Deserialize(character);
+File.WriteAllText("character.json", charachterSerialiezd);
+
+
+
+Actor actor = new Actor { FirstName = "Mykola", LastName = "Hohol", BirthDate = '15-04-2006', Country = "Ukraine", IsAlive=true };
+string ActorSerialiezd = JsonSerializer.Serialize(actor);
+File.WriteAllText("actor.json", ActorSerialiezd);
 public class Character
 {
     public string FirstName { get; set; }
